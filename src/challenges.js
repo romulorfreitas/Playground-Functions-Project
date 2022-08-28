@@ -75,7 +75,7 @@ function highestCount (array) {
   //times the largest number on parameter array will appear.
   for (let index = 0; index < array.length; index+=1) {
   //Here i created a loop to run into a parameter array.
-        if (highestNumber == array[index]); {
+        if (highestNumber == array[index]) {
   // Condition if to determine if function highestCount is equal to
   // parameter array [index] so add to variable counting how many times
   //will appears.
