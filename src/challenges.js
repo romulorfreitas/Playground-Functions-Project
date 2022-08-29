@@ -134,9 +134,44 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, string) {
+//Here I added to techList function two parameters, array and string.
+  let list = [];
+// I created a variable with empty array to receive future values.
+  array = array.sort ()
+// Here I assigned parameter array to array.sort() to have the future
+// values to be added organized as requested.
+
+  if (array.length > 0) {
+//Here I used a condition if to know if the parameter array length is
+// greater than 0. If so it wil proceed for the next line.
+    for (let index = 0; index < array.length; index+=1) {
+// Here I created a loop with for to obtain all the items that are
+// included on parameter array.      
+      let object = { 
+        tech: array[index],
+        name: string
+// Here I created a new variable called object with two new objects.
+// The fisrt property is "tech" and the property value will be the
+// paremeter array[index] because wee need to know all value that
+//will be added to array parameter to be printed each one in loop.
+// The second property is "name" and the property value will be the 
+// parameter string because we need to know which "tech" belongs to.        
+      }
+      list.push(object);
+// Here I added to variable list using .push all those properties 
+// that i created on varaible object.       
+   } 
+  } else {
+    return "Vazio!";
+//In case that we dont have any value in parameter array so return
+// with a string "Vazio!" that means "Empty!"     
+ } 
+    return list
 }
+
+// let list = (techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+// console.log(list);
 
 module.exports = {
   calcArea,
